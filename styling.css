@@ -1,0 +1,190 @@
+body {
+    background-image: url(./earth.jpg);
+    background-size: cover;
+}
+
+#scroll {
+    height: 641px;
+    overflow-y: scroll;
+}
+
+#form {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+#form #form1 {
+    width: 70%;
+    background-color: brown;
+    margin: 0 auto;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 3px solid red;
+}
+
+#form1 input {
+    width: 97%;
+    padding: 6px 5px;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-style: inset;
+    color: red;
+    font-size: 20px;
+}
+
+#form1 button {
+    width: 100%;
+    border-radius: 7px;
+    background-color: red;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#form2 {
+    width: 70%;
+    background-color:brown;
+    margin: 0 auto;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 3px solid red
+}
+
+#form2 input {
+    width: 97%;
+    padding: 6px 5px;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-style: inset;
+    color:red;
+    font-size: 20px;
+}
+
+.form2 input::placeholder {
+    color: black;
+    font-style: italic;
+    font-size: 16px;
+}
+
+#ices {
+    color: white;
+    font-size: 30px;
+    margin-top: -15px;
+}
+
+#ice {
+    color: white;
+    font-size: 30px;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+
+#sa {
+    color: white;
+    padding-right: 378px;
+    font-size: 25px;
+}
+
+#as {
+    color: white;
+    padding-right: 304px;
+    font-size: 25px;
+}
+
+#ass {
+    color: white;
+    padding-right: 320px;
+    font-size: 25px;
+}
+
+#sb {
+    color: white;
+    padding-right: 395px;
+    font-size: 25px;
+}
+
+#sc {
+    color: white;
+    padding-right: 362px;
+    font-size: 25px;
+}
+
+#sd {
+    color: white;
+    padding-right: 335px;
+    font-size: 25px;
+}
+
+#se {
+    color: white;
+    padding-right: 370px;
+    font-size: 25px;
+}
+
+#size {
+    width: 98%;
+    border-color:black;
+
+}
+
+#sizes {
+    margin-top: 20px;
+    width: 98%;
+    border-color: grey;
+
+}
+
+#sizes1 {
+    margin-top: 20px;
+    width: 98%;
+    border-color: white;
+
+}
+
+#ice {
+    color:grey;
+}
+
+input::placeholder {
+    color: black;
+    font-style: italic;
+    font-size: 16px;
+}
+
+input:hover {
+    border: 2px solid blue;
+    border-color: blue;
+}
+
+input:active {
+    border: 2px solid;
+    border-color:blue;
+}
+
+.result {
+    position: absolute;
+    width: 50%;
+    left: -58%;
+    margin-left: 100px;
+    z-index: 300;
+}
+i{
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    right: 120px;
+    font-weight: bolder;
+}

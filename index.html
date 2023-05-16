@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    
+
+    <center>
+        <div id="form">
+            <div id="form1">
+                <h2 id="ice">Student' Details</h2>
+                <hr id="size">
+                <h4 id="sa">Name:</h4>
+                <input type="text" placeholder="Enter Name" id="na" />
+                <h4 id="as">Roll Number:</h4>
+                <input type="text" placeholder="Enter Roll Number" id="rN" />
+                <hr id="sizes">
+                <h2 id="ice"><u>Enter Marks</u></h2>
+                <h4 id="sa">Urdu:</h4>
+                <input type="number" placeholder="Enter Your Urdu Marks" id="mark1" />
+                <h4 id="sa">P.S.T:</h4>
+                <input type="number" placeholder="Enter Your P.St Marks" id="mark2" />
+                <h4 id="sa">Maths:</h4>
+                <input type="number" placeholder="Enter Your Maths Marks" id="mark3" />
+                <h4 id="sa">English:</h4>
+                <input type="number" placeholder="Enter Your English Marks" id="mark4" />
+                <h4 id="sa">Banking:</h4>
+                <input type="number" placeholder="Enter Your Chemistry Marks" id="mark5" />
+                <h4 id="sa">Counting:</h4>
+                <input type="number" placeholder="Enter Your Physics Marks" id="mark6" />
+                <button onclick="grade()">Submit</button>
+                <hr id="sizes1">
+            </div>
+        </div>
+    </center>
+        <div class="result" id="see">
+            <div class="form3" id="form2">
+                <i class="sahal" onclick="hide()"></i>
+                <h2 id="ice"><u>Result</u></h2>    
+                <h4 id="sa">Name:</h4>
+                <input type="text" id="name1" readonly>
+                <h4 id="as">Roll Number:</h4>
+                <input type="text" id="rollNum1" readonly>
+                <h4 id="ass">Total Marks:</h4>
+                <input type="text" id="total1" readonly>
+                <h4 id="sd">Percentage:</h4>
+                <input type="text" id="percentage" readonly>
+                <h4 id="sa">Grade:</h4>
+                <input type="text" id="grades" readonly>
+
+            </div>
+        </div>
+
+
+    <script>
+        var form = document.getElementById("form");
+        var see = document.getElementById("see")
+        function grade() {
+            var a = document.getElementById("na").value;
+            var b = document.getElementById("rN").value;
+            var num1 = +document.getElementById("mark1").value;
+            var num2 = +document.getElementById("mark2").value;
+            var num3 = +document.getElementById("mark3").value;
+            var num4 = +document.getElementById("mark4").value;
+            var num5 = +document.getElementById("mark5").value;
+            var num6 = +document.getElementById("mark6").value;
+            if ((a != "") && (b != "") && (num1 != "" && num1 <= "100") && (num2 != "" && num2 <= "100") && (num3 != "" && num3 <= "100") && (num4 != "" && num4 <= "100") && (num5 != "" && num5 <= "100") && (num6 != "" && num6 <= "100")) {
+                see.style.left = '0';
+                form.style.display = "none";
+                document.getElementById("name1").value = a
+                document.getElementById("rollNum1").value = b
+                var total = num1 + num2 + num3 + num4 + num5 + num6;
+                document.getElementById("total1").value = total + "/600";
+                var percent = + total / 600 * 100;
+                document.getElementById("percentage").value = percent + "%";
+                if (percent >= 80) {
+                    document.getElementById('grades').value = "A'"
+                } else if (percent >= 70) {
+                    document.getElementById('grades').value = "A"
+                } else if (percent >= 60) {
+                    document.getElementById('grades').value = "B"
+                } else if (percent >= 50) {
+                    document.getElementById('grades').value = "C"
+                } else if (percent >= 40) {
+                    document.getElementById('grades').value = "D"
+                } else {
+                    document.getElementById('grades').value = "E"
+                }
+            }
+            else {
+                alert("Please Filled Input First")
+            }
+        }
+
+        function hide() {
+            see.style.left = '-58%';
+            form.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
